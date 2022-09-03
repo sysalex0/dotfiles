@@ -11,8 +11,8 @@ set commentary
 
 inoremap jk <Esc>
 
-nnoremap <leader>vv :e ~/.ideavimrc<CR>
-nnoremap <leader>vr :source ~/.ideavimrc<CR>
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :source ~/.ideavimrc<CR>
 nnoremap <leader>e :NERDTree<CR>
 
 vnoremap < <gv
