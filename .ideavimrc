@@ -1,0 +1,25 @@
+let mapleader = " "
+set hlsearch
+set ignorecase
+set smartcase
+set incsearch
+set scrolloff=5 sidescrolloff=10
+set clipboard=unnamedplus,unnamed,ideaput
+
+set NERDTree
+set commentary
+
+inoremap jk <Esc>
+
+nnoremap <leader>vv :e ~/.ideavimrc<CR>
+nnoremap <leader>vr :source ~/.ideavimrc<CR>
+nnoremap <leader>e :NERDTree<CR>
+
+vnoremap < <gv
+vnoremap > >gv
+vnoremap p pgvy
+nnoremap cr :action RenameElement<CR>
+
+nmap gi :action GotoImplementation<CR>
+nmap gu :action ShowUsages<CR>
+nmap gh <Action>(ShowErrorDescription)
