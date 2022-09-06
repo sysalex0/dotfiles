@@ -1,4 +1,7 @@
+" key mapping leader key
 let mapleader = " "
+
+" common configs
 set hlsearch
 set ignorecase
 set smartcase
@@ -6,20 +9,41 @@ set incsearch
 set scrolloff=5 sidescrolloff=10
 set clipboard=unnamedplus,unnamed,ideaput
 
+" plugins
 set NERDTree
 set commentary
+set ideajoin
 
+" key mappings for exiting insert mode
 inoremap jk <Esc>
 
+" key mappings for configuring ideavim
 nnoremap \e :e ~/.ideavimrc<CR>
 nnoremap \r :source ~/.ideavimrc<CR>
+
+" key mapping for NERDTree
 nnoremap <leader>e :NERDTree<CR>
 
-vnoremap < <gv
-vnoremap > >gv
-vnoremap p pgvy
+" key mappings for debugger
+nnoremap <leader>b :action ToggleLineBreakpoint<CR>
+nnoremap <leader>d :action Debug<CR><Esc>
+nnoremap <leader>s :action Stop<CR>
+nnoremap <A-h> :action StepOut<CR>
+nnoremap <A-j> :action StepOver<CR>
+nnoremap <A-l> :action StepInto<CR>
+
+" go to access with 'g' key
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gu :action ShowUsages<CR>
+nnoremap gh :action ShowErrorDescription<CR>
+nnoremap gb :action Back<CR>
+
+" renaming + refactoring (change refactor)
 nnoremap cr :action RenameElement<CR>
 
-nmap gi :action GotoImplementation<CR>
-nmap gu :action ShowUsages<CR>
-nmap gh <Action>(ShowErrorDescription)
+" use '<', '>' for repeated indentation
+vnoremap < <gv
+vnoremap > >gv
+
+" use 'p' to paste over selected word without replacing registry
+vnoremap p pgvy
