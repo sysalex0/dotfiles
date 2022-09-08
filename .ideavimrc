@@ -13,6 +13,7 @@ set clipboard=unnamedplus,unnamed,ideaput
 set NERDTree
 set commentary
 set ideajoin
+set surround
 
 " key mappings for exiting insert mode
 inoremap jk <Esc>
