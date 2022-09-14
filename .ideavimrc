@@ -27,19 +27,19 @@ nnoremap <leader>e :NERDTree<CR>
 
 " key mappings for debugger
 nnoremap <leader>b :action ToggleLineBreakpoint<CR>
-nnoremap <leader>d :action Debug<CR><Esc>
+nnoremap <leader>d :action Debug<CR>
 nnoremap <leader>s :action Stop<CR>
 nnoremap <A-h> :action StepOut<CR>
 nnoremap <A-j> :action StepOver<CR>
 nnoremap <A-l> :action StepInto<CR>
 
-" go to access with 'g' key
+" key mappings for code navigation
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gu :action ShowUsages<CR>
 nnoremap gh :action ShowErrorDescription<CR>
-nnoremap gb :action Back<CR>
+nmap gb <Action>(Back)
 
-" renaming + refactoring (change refactor)
+" key mappings for refactoring
 nnoremap cr :action RenameElement<CR>
 
 " use '<', '>' for repeated indentation
@@ -48,3 +48,7 @@ vnoremap > >gv
 
 " use 'p' to paste over selected word without replacing registry
 vnoremap p pgvy
+
+" fix weird key bindings
+nmap <C-o> <Action>(Back)
+nnoremap <C-r> :action $Redo<CR>
